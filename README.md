@@ -1,5 +1,5 @@
 # Antarctic-Fracture-Mapping
-## Code for creating fracture maps over the Antarctic Ice Sheet from Level-0 IW SLC data from Sentinel-1.
+## Code for creating fracture maps over the Antarctic Ice Sheet from Level-1 IW SLC data from Sentinel-1.
 ### We:
       - Download data
       - Create radiometrically terrain corrected SAR backscatter images at 50m resolution
