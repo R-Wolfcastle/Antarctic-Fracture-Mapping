@@ -11,4 +11,6 @@ There is not yet a great deal of documentation for this code, and the commenting
 
 Provided in the directories in this repo are scripts for carrying out prcocessing (generally in Python), and example shell scripts that set up processing on an HPC cluster. Scripts for creating the SAR backscatter images are written in bash and call functions from the GAMMA Remote Sensing software (https://www.gamma-rs.ch/software) which is not freely available - sorry about that.
 
-The Python code is written for the most part in a declarative functional style nicely suited to pipelining data. This should make the scripts a bit easier to make sense of, but could also be confusing (I'm thinking particularly of the scripts for the production of fracture maps from SAR images contained in ./create_fracture_maps/python_scripts/). Feel free to contact me.
+The Python code is written for the most part in a declarative functional style due to the amount of data pipelining required. This should make the scripts a bit easier to make sense of, but could also be confusing (I'm thinking particularly of the scripts for the production of fracture maps from SAR images contained in ./create_fracture_maps/python_scripts/). Feel free to contact me.
+
+(All code by me, except where otherwise stated.)
