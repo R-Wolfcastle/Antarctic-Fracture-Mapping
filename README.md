@@ -13,4 +13,6 @@ Provided in the directories in this repo are scripts for carrying out prcocessin
 
 The Python code is written for the most part in a declarative functional style due to the amount of data pipelining required. This should make the scripts a bit easier to make sense of, but could also be confusing (I'm thinking particularly of the scripts for the production of fracture maps from SAR images contained in ./create_fracture_maps/python_scripts/). Feel free to contact me.
 
+If using the parallel structure filtering algorithm, please cite me!
+
 (All code by me, except where otherwise stated.)
