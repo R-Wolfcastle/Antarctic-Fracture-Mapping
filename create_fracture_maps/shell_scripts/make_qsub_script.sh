@@ -12,7 +12,7 @@
 # $8: bs script name
 # $9: damage 1a script name
 # $10: damage 1b script name
-# $11: postprocess 1b script name
+# $11: parallel structure filtering script name
 # $12: process 1a
 # $13: process 1b
 # $14: machine

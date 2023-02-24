@@ -82,7 +82,7 @@ for ((j=1; j<=$num_images; j++)); do
 			bs_script_name="generate_ard_bs.sh"
 			damage_1a_script_name="extract_damage_par_db_1a.py"
 			damage_1b_script_name="extract_damage_par_db_1b.py"
-			postprocess_1b_script_name="postprocess_type_1b.py"
+			parallel_structure_filtering_script_name="psf.py"
 
             ${SCRIPT_HOME}    
 			cp --no-clobber ${SCRIPT_HOME}/create_fracture_maps/shell_scripts/${download_script_name} .
@@ -92,7 +92,7 @@ for ((j=1; j<=$num_images; j++)); do
 			fi
 			if [ $process_1b = "true" ]; then
 		    	cp --no-clobber ${SCRIPT_HOME}/create_fracture_maps/python_scripts/${damage_1b_script_name} .
-		    	cp --no-clobber ${SCRIPT_HOME}/create_fracture_maps/python_scripts/${postprocess_1b_script_name} .
+		    	cp --no-clobber ${SCRIPT_HOME}/create_fracture_maps/python_scripts/${parallel_structure_filtering_script_name} .
 			fi
 	
 			bash ${SCRIPT_HOME}/create_fracture_maps/shell_scripts/make_qsub_script.sh $granule_name \
@@ -105,7 +105,7 @@ for ((j=1; j<=$num_images; j++)); do
 																						${bs_script_name} \
 																						${damage_1a_script_name} \
 		                                                                                ${damage_1b_script_name} \
-		                                                                                ${postprocess_1b_script_name} \
+		                                                                                ${parallel_structure_filtering_script_name} \
 		                                                                                ${process_1a} \
 		                                                                                ${process_1b} \
 																						${machine}
