@@ -322,11 +322,10 @@ def mosaic_1a(date1, date2, data_superdir, directory_for_date_fp_txt_files, outd
         
             argzip = zip_up_args(chunk_domains, vrt_fps, tiff_fps, res, fps_txt_fp, 0, np.nan, merge_function)
         
-            if __name__ == '__main__':
-                pool = Pool(num_procs_py)
-                pool.map(unpack_args_and_process_chunk, argzip)
-                pool.close()
-                pool.join()
+            pool = Pool(num_procs_py)
+            pool.map(unpack_args_and_process_chunk, argzip)
+            pool.close()
+            pool.join()
         
             completed_tiff_fps = [fp for fp in tiff_fps if os.path.isfile(fp)]
         
@@ -376,11 +375,10 @@ def mosaic_bs(date1, date2, data_superdir, directory_for_date_fp_txt_files, outd
     
         argzip = zip_up_args(chunk_domains, vrt_fps, tiff_fps, res, fps_txt_fp, 0, np.nan, merge_function)
     
-        if __name__ == '__main__':
-            pool = Pool(num_procs_py)
-            pool.map(unpack_args_and_process_chunk, argzip)
-            pool.close()
-            pool.join()
+        pool = Pool(num_procs_py)
+        pool.map(unpack_args_and_process_chunk, argzip)
+        pool.close()
+        pool.join()
     
         completed_tiff_fps = [fp for fp in tiff_fps if os.path.isfile(fp)]
     
@@ -440,12 +438,11 @@ def mosaic_1b(date1, date2, data_superdir, outdir, aoi, aoi_name, res, chunk_dom
                 res, domain_tag) for domain_tag in list(np.arange(len(chunk_domains)))]
 
         argzip = zip_up_args_p_var(chunk_domains, vrt_fps, vrt_2_fps, tiff_fps, res, fps_txt_fp)
-        
-        if __name__ == '__main__':
-            pool = Pool(num_procs_py)
-            pool.map(unpack_args_and_process_chunk_p_var, argzip)
-            pool.close()
-            pool.join()
+    
+        pool = Pool(num_procs_py)
+        pool.map(unpack_args_and_process_chunk_p_var, argzip)
+        pool.close()
+        pool.join()
 
         completed_tiff_fps = [fp for fp in tiff_fps if os.path.isfile(fp)]
 
@@ -482,11 +479,10 @@ def mosaic_1b(date1, date2, data_superdir, outdir, aoi, aoi_name, res, chunk_dom
 #        #It'll sort it out even though I've given it None as the fp input, as I've already made the vrt.
 #        argzip = zip_up_args(chunk_domains, vrt_fps, tiff_fps, res, None, 0, np.nan, function=None)
 #        
-#        if __name__ == '__main__':
-#            pool = Pool(num_procs_py)
-#            pool.map(unpack_args_and_process_chunk, argzip)
-#            pool.close()
-#            pool.join()
+#        pool = Pool(num_procs_py)
+#        pool.map(unpack_args_and_process_chunk, argzip)
+#        pool.close()
+#        pool.join()
 #
 #        completed_tiff_fps = [fp for fp in tiff_fps if os.path.isfile(fp)]
 
